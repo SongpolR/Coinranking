@@ -1,4 +1,4 @@
-package com.songpol.sudoku.core.ui
+package com.songpol.coinranking
 
 import org.junit.Test
 
