@@ -27,6 +27,7 @@ dependencies {
     compileOnly(libs.firebase.crashlytics.gradlePlugin)
     compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
 }
 
 gradlePlugin {
@@ -51,6 +52,10 @@ gradlePlugin {
             id = "coinranking.android.application.jacoco"
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
+        register("androidFeature") {
+            id = "coinranking.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
         register("androidLibrary") {
             id = "coinranking.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -62,6 +67,10 @@ gradlePlugin {
         register("androidLibraryJacoco") {
             id = "coinranking.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
+        register("hilt") {
+            id = "coinranking.hilt"
+            implementationClass = "HiltConventionPlugin"
         }
     }
 }
