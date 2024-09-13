@@ -24,4 +24,5 @@ rootProject.name = "Coinranking"
 
 include(":app")
 include(":core:common")
+include(":core:designsystem")
 include(":core:ui")
