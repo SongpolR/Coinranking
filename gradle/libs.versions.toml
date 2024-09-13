@@ -13,6 +13,7 @@ jacoco = "0.8.7"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 kotlin = "2.0.20"
+kotlinxCoroutines = "1.8.0"
 lifecycleRuntimeKtx = "2.6.1"
 
 [libraries]
@@ -34,6 +35,7 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
 firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
@@ -56,3 +58,6 @@ coinranking-android-application-compose = { id = "coinranking.android.applicatio
 coinranking-android-application-firebase = { id = "coinranking.android.application.firebase", version = "unspecified" }
 coinranking-android-application-flavors = { id = "coinranking.android.application.flavors", version = "unspecified" }
 coinranking-android-application-jacoco = { id = "coinranking.android.application.jacoco", version = "unspecified" }
+coinranking-android-library = { id = "coinranking.android.library", version = "unspecified" }
+coinranking-android-library-compose = { id = "coinranking.android.library.compose", version = "unspecified" }
+coinranking-android-library-jacoco = { id = "coinranking.android.library.jacoco", version = "unspecified" }

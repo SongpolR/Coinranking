@@ -51,5 +51,17 @@ gradlePlugin {
             id = "coinranking.android.application.jacoco"
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "coinranking.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "coinranking.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidLibraryJacoco") {
+            id = "coinranking.android.library.jacoco"
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
     }
 }

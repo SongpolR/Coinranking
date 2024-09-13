@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "Coinranking"
 
 include(":app")
+include(":core:common")
