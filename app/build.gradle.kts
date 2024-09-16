@@ -64,6 +64,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.android.material)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)

@@ -1,6 +1,9 @@
+import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
 import com.songpol.coinranking.configureFlavors
 import com.songpol.coinranking.configureKotlinAndroid
+import com.songpol.coinranking.disableUnnecessaryAndroidTests
+import com.songpol.coinranking.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -27,9 +30,14 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                     path.split("""\W""".toRegex()).drop(1).distinct().joinToString(separator = "_")
                         .lowercase() + "_"
             }
+            extensions.configure<LibraryAndroidComponentsExtension> {
+                disableUnnecessaryAndroidTests(target)
+            }
             dependencies {
                 add("androidTestImplementation", kotlin("test"))
                 add("testImplementation", kotlin("test"))
+
+                add("implementation", libs.findLibrary("androidx.tracing").get())
             }
         }
     }

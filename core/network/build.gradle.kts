@@ -8,9 +8,15 @@ plugins {
 
 android {
     namespace = "com.songpol.coinranking.core.network"
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
+    implementation(libs.okhttp.logging)
+    implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit.core)
 }
 

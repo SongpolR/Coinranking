@@ -5,6 +5,9 @@ buildscript {
     }
 }
 
+// Resolve this issue: https://issuetracker.google.com/issues/315023802
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
+
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.compose) apply false

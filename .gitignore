@@ -9,3 +9,4 @@
 .cxx
 keystore.properties
 local.properties
+/.kotlin/*
