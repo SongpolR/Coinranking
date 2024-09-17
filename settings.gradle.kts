@@ -22,6 +22,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Coinranking"
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":app")
 
 include(":core:common")

@@ -17,9 +17,11 @@ firebasePerfPlugin = "1.4.2"
 gmsPlugin = "4.4.1"
 hilt = "2.51.1"
 jacoco = "0.8.7"
+jodaMoney = "1.0.5"
 junit4 = "4.13.2"
 kotlin = "2.0.20"
 kotlinxCoroutines = "1.8.0"
+kotlinxDatetime = "0.5.0"
 kotlinxSerializationJson = "1.6.3"
 ksp = "2.0.20-1.0.24"
 okhttp = "4.12.0"
@@ -56,9 +58,11 @@ firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
+joda-money = { group = "org.joda", name = "joda-money", version.ref = "jodaMoney" }
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }

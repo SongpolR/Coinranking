@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.coinranking.android.library)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -7,5 +8,5 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.kotlinx.serialization.json)
 }

@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
  * Wrapper for data provided from the API
  */
 @Serializable
-private data class NetworkResponse<T>(
+data class NetworkResponse<T>(
     val data: T,
 )
+
+const val DEFAULT_ITEM_PER_PAGE = 25

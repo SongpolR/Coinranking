@@ -15,6 +15,10 @@ android {
 }
 
 dependencies {
+    api(libs.kotlinx.datetime)
+    api(projects.core.model)
+
+    implementation(libs.joda.money)
     implementation(libs.okhttp.logging)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit.core)
