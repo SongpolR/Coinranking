@@ -9,5 +9,3 @@ import kotlinx.serialization.Serializable
 data class NetworkResponse<T>(
     val data: T,
 )
-
-const val DEFAULT_ITEM_PER_PAGE = 25

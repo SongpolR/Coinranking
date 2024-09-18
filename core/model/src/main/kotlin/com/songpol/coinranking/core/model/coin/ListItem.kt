@@ -4,6 +4,6 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CoinListing(
+data class CoinListItem(
     @SerialName("uuid") val id: CoinId,
 )

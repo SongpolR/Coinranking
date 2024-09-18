@@ -64,7 +64,7 @@ import kotlinx.serialization.Serializable
  */
 
 @Serializable
-data class CoinListingResponse(
+data class CoinListResponse(
     @SerialName("stats") val stat: Stats,
     @SerialName("coins") val coins: List<Coin>,
 ){
