@@ -9,7 +9,7 @@ import com.songpol.coinranking.core.network.model.coin.CoinListingResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface CoinrankingService {
+interface CoinService {
 
     @GET("v2/coins")
     suspend fun getCoins(
