@@ -8,7 +8,6 @@ typealias CoinSymbol = String
 
 const val USD_COIN_ID = "yhjMzLPhuIDl"
 
-@Serializable
 data class CoinDetail(
-    @SerialName("uuid") val id: CoinId,
+    val id: CoinId,
 )

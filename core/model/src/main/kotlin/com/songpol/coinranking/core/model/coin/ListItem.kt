@@ -1,9 +1,12 @@
 package com.songpol.coinranking.core.model.coin
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@Serializable
 data class CoinListItem(
-    @SerialName("uuid") val id: CoinId,
+    val id: CoinId,
+    val rank: Int,
+    val symbol: CoinSymbol,
+    val iconUrl: String,
+    val marketCap: String,
+    val price: String,
+    val change: String,
+    val sparkline: List<String>
 )

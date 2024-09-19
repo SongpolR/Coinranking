@@ -8,5 +8,39 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class CoinTag {
     @SerialName("defi")
-    DEFI
+    DEFI,
+    @SerialName("stablecoin")
+    STABLECOIN,
+    @SerialName("nft")
+    NFT,
+    @SerialName("dex")
+    DEX,
+    @SerialName("exchange")
+    EXCHANGE,
+    @SerialName("staking")
+    STAKING,
+    @SerialName("dao")
+    DAO,
+    @SerialName("meme")
+    MEME,
+    @SerialName("privacy")
+    PRIVACY,
+    @SerialName("metaverse")
+    METAVERSE,
+    @SerialName("gaming")
+    GAMING,
+    @SerialName("wrapped")
+    WRAPPED,
+    @SerialName("layer-1")
+    LAYER_1,
+    @SerialName("layer-2")
+    LAYER_2,
+    @SerialName("fan-token")
+    FAN_TOKEN,
+    @SerialName("football-club")
+    FOOTBALL_CLUB,
+    @SerialName("web3")
+    WEB3,
+    @SerialName("social")
+    SOCIAL,
 }
