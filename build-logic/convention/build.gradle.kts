@@ -27,6 +27,7 @@ dependencies {
     compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
 }
 
 tasks {
@@ -73,6 +74,10 @@ gradlePlugin {
         register("androidLibraryJacoco") {
             id = "coinranking.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
+        register("androidRoom") {
+            id = "coinranking.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
         }
         register("hilt") {
             id = "coinranking.hilt"
