@@ -2,7 +2,10 @@ package com.songpol.coinranking.core.network.di
 
 import androidx.tracing.trace
 import com.songpol.coinranking.core.network.BuildConfig
-import com.songpol.coinranking.core.network.service.CoinService
+import com.songpol.coinranking.core.network.datasource.CoinNetworkDataSource
+import com.songpol.coinranking.core.network.datasource.CoinNetworkDataSourceImpl
+import com.songpol.coinranking.core.network.service.coin.CoinService
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,41 +19,50 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object NetworkModule {
+internal abstract class NetworkModule {
 
-    @Provides
+    @Binds
     @Singleton
-    fun providesNetworkJson(): Json = Json {
-        ignoreUnknownKeys = true
-    }
+    abstract fun bindCoinNetworkDataSource(
+        coinNetworkDataSourceImpl: CoinNetworkDataSourceImpl,
+    ): CoinNetworkDataSource
 
-    @Provides
-    @Singleton
-    fun okHttpCallFactory(): Call.Factory = trace("OkHttpClient") {
-        OkHttpClient.Builder()
-            .addInterceptor(
-                HttpLoggingInterceptor()
-                    .apply {
-                        if (BuildConfig.DEBUG) {
-                            setLevel(HttpLoggingInterceptor.Level.BODY)
-                        }
-                    },
-            )
-            .build()
-    }
+    companion object {
 
-    @Provides
-    @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .client(okHttpClient)
-            .baseUrl(BuildConfig.API_KEY)
-            .build()
-    }
+        @Provides
+        @Singleton
+        fun providesNetworkJson(): Json = Json {
+            ignoreUnknownKeys = true
+        }
 
-    @Provides
-    @Singleton
-    fun provideCoinService(retrofit: Retrofit): CoinService {
-        return retrofit.create(CoinService::class.java)
+        @Provides
+        @Singleton
+        fun okHttpCallFactory(): Call.Factory = trace("OkHttpClient") {
+            OkHttpClient.Builder()
+                .addInterceptor(
+                    HttpLoggingInterceptor()
+                        .apply {
+                            if (BuildConfig.DEBUG) {
+                                setLevel(HttpLoggingInterceptor.Level.BODY)
+                            }
+                        },
+                )
+                .build()
+        }
+
+        @Provides
+        @Singleton
+        fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+            return Retrofit.Builder()
+                .client(okHttpClient)
+                .baseUrl(BuildConfig.API_KEY)
+                .build()
+        }
+
+        @Provides
+        @Singleton
+        fun provideCoinService(retrofit: Retrofit): CoinService {
+            return retrofit.create(CoinService::class.java)
+        }
     }
 }
