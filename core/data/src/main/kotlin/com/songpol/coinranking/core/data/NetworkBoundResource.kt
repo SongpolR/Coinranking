@@ -1,4 +1,4 @@
-package com.songpol.coinranking.core.common.data
+package com.songpol.coinranking.core.data
 
 import com.songpol.coinranking.core.common.result.Result
 import kotlinx.coroutines.flow.Flow
