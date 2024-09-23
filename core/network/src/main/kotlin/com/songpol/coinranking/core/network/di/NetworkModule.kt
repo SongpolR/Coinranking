@@ -2,8 +2,8 @@ package com.songpol.coinranking.core.network.di
 
 import androidx.tracing.trace
 import com.songpol.coinranking.core.network.BuildConfig
-import com.songpol.coinranking.core.network.datasource.CoinNetworkDataSource
-import com.songpol.coinranking.core.network.datasource.CoinNetworkDataSourceImpl
+import com.songpol.coinranking.core.network.datasource.coin.CoinNetworkDataSource
+import com.songpol.coinranking.core.network.datasource.coin.CoinNetworkDataSourceImpl
 import com.songpol.coinranking.core.network.service.coin.CoinService
 import dagger.Binds
 import dagger.Module

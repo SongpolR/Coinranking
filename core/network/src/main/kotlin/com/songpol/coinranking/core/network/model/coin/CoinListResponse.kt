@@ -1,6 +1,7 @@
 package com.songpol.coinranking.core.network.model.coin
 
 import com.songpol.coinranking.core.model.coin.CoinId
+import com.songpol.coinranking.core.model.coin.CoinListItem
 import com.songpol.coinranking.core.model.coin.CoinSymbol
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
@@ -64,7 +65,7 @@ import kotlinx.serialization.Serializable
  */
 
 @Serializable
-data class CoinsResponse(
+data class CoinListResponse(
     @SerialName("stats") val stat: Stats,
     @SerialName("coins") val coins: List<Coin>,
 ){
@@ -101,3 +102,15 @@ data class CoinsResponse(
     )
 }
 
+fun CoinListResponse.Coin.asExternalModel(): CoinListItem{
+    return CoinListItem(
+        id = id,
+        rank = rank,
+        symbol = symbol,
+        iconUrl = iconUrl,
+        marketCap = marketCap,
+        price = price,
+        change = change,
+        sparkline = sparkline
+    )
+}

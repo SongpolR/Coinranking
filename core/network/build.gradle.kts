@@ -20,6 +20,7 @@ dependencies {
 
     implementation(libs.okhttp.logging)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.coroutines.test)
     implementation(libs.retrofit.core)
 }
 
