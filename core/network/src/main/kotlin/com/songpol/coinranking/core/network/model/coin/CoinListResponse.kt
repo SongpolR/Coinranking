@@ -66,7 +66,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CoinListResponse(
-    @SerialName("stats") val stat: Stats,
+    @SerialName("stats") val stats: Stats,
     @SerialName("coins") val coins: List<Coin>,
 ){
 
@@ -89,7 +89,7 @@ data class CoinListResponse(
         @SerialName("iconUrl") val iconUrl: String,
         @SerialName("marketCap") val marketCap: String,
         @SerialName("price") val price: String,
-        @SerialName("listedAt") val listedAt: Instant,
+        @SerialName("listedAt") val listedAt: Long,
         @SerialName("tier") val tier: Int,
         @SerialName("change") val change: String,
         @SerialName("rank") val rank: Int,

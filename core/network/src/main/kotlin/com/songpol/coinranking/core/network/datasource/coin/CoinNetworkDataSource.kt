@@ -7,7 +7,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
 interface CoinNetworkDataSource {
-    suspend fun getCoins(params: CoinListParams): List<CoinListResponse.Coin>
+    suspend fun getCoinList(params: CoinListParams): CoinListResponse
 }
 
 class CoinNetworkDataSourceImpl(
@@ -15,7 +15,7 @@ class CoinNetworkDataSourceImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : CoinNetworkDataSource {
 
-    override suspend fun getCoins(params: CoinListParams): List<CoinListResponse.Coin> =
+    override suspend fun getCoinList(params: CoinListParams): CoinListResponse =
         withContext(ioDispatcher) {
             coinService.getCoinList(
                 refCurrencyId = params.refCurrencyId,
@@ -24,6 +24,6 @@ class CoinNetworkDataSourceImpl(
                 orderDirection = params.orderDirection,
                 limit = params.limit,
                 offset = params.offset
-            ).data.coins
+            ).data
         }
 }
