@@ -10,5 +10,5 @@ android {
 }
 
 dependencies {
-
+    api(projects.core.model)
 }
