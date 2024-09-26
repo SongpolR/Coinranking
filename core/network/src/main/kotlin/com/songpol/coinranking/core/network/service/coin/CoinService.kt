@@ -12,7 +12,7 @@ import retrofit2.http.Query
 interface CoinService {
 
     @GET("v2/coins")
-    suspend fun getCoinList(
+    suspend fun getCoins(
         @Query("referenceCurrencyUuid") refCurrencyId: CoinId,
         @Query("timePeriod") timePeriod: InfoTimePeriod,
         @Query("orderBy") orderBy: ListingOrderAttribute,

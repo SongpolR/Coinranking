@@ -17,7 +17,7 @@ class FakeCoinService : CoinService {
     }
 
     @OptIn(ExperimentalSerializationApi::class)
-    override suspend fun getCoinList(
+    override suspend fun getCoins(
         refCurrencyId: CoinId,
         timePeriod: InfoTimePeriod,
         orderBy: ListingOrderAttribute,

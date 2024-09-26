@@ -38,7 +38,7 @@ class CoinNetworkDataSourceTest {
                 totalMarketCap = "2281264193389",
                 total24hVolume = "64167273921"
             ),
-            subject.getCoinList(
+            subject.getCoins(
                 params = CoinListParams(
                     limit = 25,
                     offset = 0,
@@ -98,7 +98,7 @@ class CoinNetworkDataSourceTest {
                 btcPrice = "1",
                 contractAddresses = emptyList()
             ),
-            subject.getCoinList(
+            subject.getCoins(
                 params = CoinListParams(
                     limit = 25,
                     offset = 0,

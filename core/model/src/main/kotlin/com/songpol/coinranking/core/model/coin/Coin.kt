@@ -1,6 +1,11 @@
 package com.songpol.coinranking.core.model.coin
 
-data class CoinListItem(
+typealias CoinId = String
+typealias CoinSymbol = String
+
+const val USD_COIN_ID = "yhjMzLPhuIDl"
+
+data class Coin(
     val id: CoinId,
     val rank: Int,
     val symbol: CoinSymbol,
