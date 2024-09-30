@@ -3,6 +3,7 @@ package com.songpol.coinranking.core.database.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.songpol.coinranking.core.model.coin.Coin
 import com.songpol.coinranking.core.model.coin.CoinId
 import com.songpol.coinranking.core.model.coin.CoinSymbol
 
@@ -21,4 +22,15 @@ data class CoinEntity(
     val price: String,
     val change: String,
     val sparkline: List<String>
+)
+
+fun CoinEntity.asExternalModel() = Coin(
+    id = id,
+    rank = rank,
+    symbol = symbol,
+    iconUrl = iconUrl,
+    marketCap = marketCap,
+    price = price,
+    change = change,
+    sparkline = sparkline,
 )
